@@ -12,9 +12,19 @@
   	<servlet-class>com.example.servlet.MyServlet</servlet-class>
   </servlet>
   
+  <servlet>
+  	<servlet-name>JspServlet</servlet-name>
+  	<jsp-file>/BasicCounter.jsp</jsp-file>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>MainServlet</servlet-name>
   	<url-pattern>/HobbyPage.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>JspServlet</servlet-name>
+  	<url-pattern>/BasicCounter.jsp</url-pattern>
   </servlet-mapping>
   
 </web-app>
