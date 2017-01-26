@@ -12,6 +12,25 @@
 <title>Basic Counter Page</title>
 </head>
 <body>
-
+	<%! 
+	 String admin = null;
+	 String user = null;
+	%>
+	<%!
+		public void jspInit(){ // notice there no underscore in front of method 
+			// so its ok to override this method
+			// First you dont have implicit objects, there are another way
+			// to get ServletConfig object and ServletContext object
+			// to get ServletConfig reference to the object from jsp:
+			ServletConfig config = getServletConfig();
+			// to get ServletContext reference to the object from jsp:
+			ServletContext app_config = getServletContext();
+			// and now you can use initParameter methods from any scope config:
+			// example using ServletConfig getInitParameter(String str); :
+			 admin = app_config.getInitParameter("Admin");
+			// example using ServletContext getInitParameter(String str); :
+			user = config.getInitParameter("User");
+					}
+	%>
 </body>
 </html>

@@ -7,6 +7,11 @@
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   
+  <context-param>
+  	<param-name>Admin</param-name>
+  	<param-value>Andrius</param-value>
+  </context-param>
+  
   <servlet>
   	<servlet-name>MainServlet</servlet-name>
   	<servlet-class>com.example.servlet.MyServlet</servlet-class>
@@ -15,6 +20,10 @@
   <servlet>
   	<servlet-name>JspServlet</servlet-name>
   	<jsp-file>/BasicCounter.jsp</jsp-file>
+  	<init-param>
+  		<param-name>User</param-name>
+  		<param-value>Rita</param-value>
+  	</init-param>
   </servlet>
   
   <servlet-mapping>
